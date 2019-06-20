@@ -1,0 +1,13 @@
+.chat-side
+  .side-header
+    .user-box
+      %p.user-box__user-name UserName
+      %ul.user-box__menu
+        %li.menu__new-group
+          =link_to "#", class: "menu-btn" do
+            %i.fa.fa-edit
+        %li.menu__edit-user
+          =link_to "#", class: "menu-btn" do
+            %i.fa.fa-cog
+  .groups
+    = render "./module/group"
