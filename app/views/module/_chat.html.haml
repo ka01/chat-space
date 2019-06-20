@@ -1,0 +1,23 @@
+.main-header
+  .main-header__left-side
+    %h2.current-group
+      groupname
+    %ul.member-list
+      Member：
+      %li.member membername
+  =link_to "#", class: "edit-link" do
+    .main-header__edit-btn Edit
+.messages
+  .message
+    .message__talker-info
+      %p.talker-name talkername
+      %p.date 2019/06/16(Sun) 19:14:53
+    %p.message-text hogehoge
+.form
+  %form.new-message
+    .input-form
+      %input.input-form__text{placeholder: "type a message"}/
+      %label.input-form__image
+        %i.fa.fa-image
+        %input.input-form__imagxe-file{type: "file"}/
+    %input.submit-btn{type: "submit", value: "Send"}/
