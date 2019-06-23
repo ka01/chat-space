@@ -1,13 +1,14 @@
 .chat-side
   .side-header
     .user-box
-      %p.user-box__user-name UserName
+      %p.user-box__user-name
+        = current_user.name
       %ul.user-box__menu
         %li.menu__new-group
-          =link_to "#", class: "menu-btn" do
-            %i.fa.fa-edit
+          = link_to do
+            = fa_icon 'pencil-square-o', class: 'menu-btn'
         %li.menu__edit-user
-          =link_to "#", class: "menu-btn" do
-            %i.fa.fa-cog
+          =link_to edit_user_path(current_user) do
+            = fa_icon 'cog', class: 'menu-btn'
   .groups
     = render "./module/group"
