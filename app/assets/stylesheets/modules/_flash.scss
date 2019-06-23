@@ -1,0 +1,15 @@
+.notice-box {
+  background-color: $partsBlue;
+  width: 100vw;
+  .notice {
+    color: $fontWhite;
+    font-size: 1rem;
+    font-weight: lighter;
+    text-align: center;
+  }
+  .alert {
+    background-color: $alert_orange;
+    color: $fontWhite;
+    text-align: center;
+  }
+}
