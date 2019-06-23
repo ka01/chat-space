@@ -1,6 +1,8 @@
-@import "./reset";
-@import "./variable";
 @import "font-awesome";
-@import "./index";
-@import "./chat-side";
-@import "./chat-main";
+@import "config/reset";
+@import "config/variable";
+@import "modules/flash";
+@import "modules/index";
+@import "modules/chat-side";
+@import "modules/chat-main";
+@import "modules/user";
