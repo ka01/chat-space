@@ -5,7 +5,7 @@
         = current_user.name
       %ul.user-box__menu
         %li.menu__new-group
-          = link_to do
+          = link_to new_group_path do
             = fa_icon 'pencil-square-o', class: 'menu-btn'
         %li.menu__edit-user
           =link_to edit_user_path(current_user) do
