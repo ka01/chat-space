@@ -39,14 +39,14 @@
     text-decoration: none;
     color: $fontWhite;
   }
-    .group {
-      margin: 0 0 40px;
-      &__group-name{
-        font-size: 15px;
-        margin: 0 0 5px;
-      }
-      &__latest-message{
-        font-size: 11px;
-      }
+  .group {
+    margin: 0 0 40px;
+    &__group-name{
+      font-size: 15px;
+      margin: 0 0 5px;
     }
+    &__latest-message{
+      font-size: 11px;
+    }
+  }
 }
