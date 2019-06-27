@@ -67,42 +67,43 @@
   }
 
   .form {
+    background-color: #DDDDDD;
+    box-sizing: border-box;
     height: 90px;
     padding: 20px 40px;
-    background-color: #ddd;
-    .new-message{
-      display: flex;
-      .input-form{
-        box-sizing: border-box;
-        position: relative;
-        width: 100%;
-        &__text {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: $fontDarkGray;
-          border-style: none;
-        }
-        &__image {
-          font-size: 1.3rem;
-          position: absolute;
-          top: 10px;
-          right: 10px;
-          cursor: pointer;
-        }
-        &__imagxe-file{
-          display: none;
-        }
+    &__message {
+      border-style: none;
+      float: left;
+      margin-right: 0;
+      height: 50px;
+      width: calc(100% - 148px);
+      padding: 0 40px 0 10px;
+    }
+    &__mask {
+      background-color: $fontWhite;
+      float: left;
+      height: 50px;
+      padding-right: 10px;
+      &__image {
+        font-size: 20px;
+        line-height: 50px;
+        top: 10px;
+        right:10px;
       }
-      .submit-btn {
-        width: 100px;
-        height: 50px;
-        padding: 0 30px;
-        margin-left: 15px;
-        background-color:$partsBlue;
-        color: $fontWhite;
-        cursor: pointer;
+      .hidden {
+        display: none;
       }
+    }
+    &__submit {
+      background-color: $partsBlue;
+      width: 100px;
+      border: none;
+      color: $fontWhite;
+      float: right;
+      font-size: 16px;
+      height: 50px;
+      margin-left: 15px;
+      padding: 0 30px;
     }
   }
 }

@@ -14,10 +14,10 @@
       %p.date 2019/06/16(Sun) 19:14:53
     %p.message-text hogehoge
 .form
-  %form.new-message
-    .input-form
-      %input.input-form__text{placeholder: "type a message"}/
-      %label.input-form__image
-        %i.fa.fa-image
-        %input.input-form__imagxe-file{type: "file"}/
-    %input.submit-btn{type: "submit", value: "Send"}/
+  = form_for [@group, @message] do |f|
+    = f.text_field :content, class: 'form__message', placeholder: 'type a message'
+    .form__mask
+      = f.label :image, class: 'form__mask__image' do
+        = fa_icon 'picture-o', class: 'icon'
+        = f.file_field :image, class: 'hidden'
+    = f.submit 'Send', class: 'form__submit'
