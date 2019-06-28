@@ -8,11 +8,18 @@
   =link_to "#", class: "edit-link" do
     .main-header__edit-btn Edit
 .messages
-  .message
-    .message__talker-info
-      %p.talker-name talkername
-      %p.date 2019/06/16(Sun) 19:14:53
-    %p.message-text hogehoge
+  - @messages.each do |message|
+    .message
+      .message__talker-info
+        .talker-name
+          = message.user.name
+        .date
+          = message.created_at.strftime("%Y/%m/%d %H:%M")
+      .message-text
+        - if message.content.present?
+          %p.lower-message__content
+            = message.content
+        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 .form
   = form_for [@group, @message] do |f|
     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
