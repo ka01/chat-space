@@ -19,7 +19,7 @@
         - if message.content.present?
           %p.lower-message__content
             = message.content
-        = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
+      = image_tag message.image.url, class: 'lower-message__image' if message.image.present?
 .form
   = form_for [@group, @message] do |f|
     = f.text_field :content, class: 'form__message', placeholder: 'type a message'
