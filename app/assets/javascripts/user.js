@@ -48,7 +48,6 @@ $(function() {
   });
   $(document).on('click', '.chat-group-user__btn--add', function(){
     $(this).parent().remove();
-    console.log(this);
     var userName = $(this).attr('data-user-name');
     var userId = $(this).attr('data-user-id');
     changeUser(userName, userId);
