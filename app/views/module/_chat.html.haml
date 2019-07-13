@@ -9,7 +9,7 @@
     .main-header__edit-btn Edit
 .messages
   - @messages.each do |message|
-    .message{"data-message-di": "#{message.id}"}
+    .message{"data-message-id": "#{message.id}"}
       .message__talker-info
         .talker-name
           = message.user.name
