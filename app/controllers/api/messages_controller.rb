@@ -1,6 +1,6 @@
 class Api::MessagesController < ApplicationController
   def index
-    # @group = group.find(params[:group_id])
-    @message = @group.messages.includes(:user).where('id > ?', params[:last_id])
+    @group = Group.find(params[:group_id])
+    @messages = @group.messages.includes(:user).where('id > ?', params[:id])
   end
 end
