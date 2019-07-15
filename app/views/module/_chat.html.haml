@@ -1,15 +1,17 @@
 .main-header
   .main-header__left-side
     %h2.current-group
-      groupname
+      = @group.name
     %ul.member-list
       Member：
-      %li.member membername
-  =link_to "#", class: "edit-link" do
+      %li.member 
+        - @group.group_users.each do |group_user|
+          = group_user.user.name
+  =link_to edit_group_path(@group.id) , class: "edit-link" do
     .main-header__edit-btn Edit
 .messages
   - @messages.each do |message|
-    .message
+    .message{"data-message-id": "#{message.id}"}
       .message__talker-info
         .talker-name
           = message.user.name
