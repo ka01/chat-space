@@ -1,4 +1,4 @@
-$(function() {
+$(document).on('turbolinks:load', function() {
 
   var index = $("#user-search-result");
   function appendUser(user) {
@@ -24,7 +24,6 @@ $(function() {
   $("#user-search-field").on("keyup", function(e) {
     e.preventDefault();
     var input = $.trim($(this).val());
-    
     $.ajax({
       type: 'GET',
       url: '/users',
@@ -46,7 +45,7 @@ $(function() {
       alert('検索に失敗しました');
     })
   });
-  $(document).on('click', '.chat-group-user__btn--add', function(){
+  $('#user-search-result').on('click', '.user-search-add', function(){
     $(this).parent().remove();
     var userName = $(this).attr('data-user-name');
     var userId = $(this).attr('data-user-id');
